@@ -15,8 +15,8 @@
 
 body{
     background:#000;
-    font-family:Arial, Helvetica, sans-serif;
     color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -30,80 +30,63 @@ body{
 
 .hero{
     width:100%;
-    max-width:1000px;
-    position:relative;
+    max-width:900px;
+    text-align:center;
 }
 
 .hero img{
     width:100%;
+    height:auto;
     display:block;
     border-radius:12px;
 }
 
 .buy-button{
-    position:absolute;
-    bottom:40px;
-    right:40px;
-    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
     background:#ff2b2b;
-    color:white;
-    padding:18px 36px;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 32px;
+    border-radius:10px;
     font-size:22px;
     font-weight:bold;
-    border-radius:10px;
     transition:.3s;
-    box-shadow:0 0 20px rgba(255,43,43,.4);
 }
 
 .buy-button:hover{
-    background:#ff4a4a;
     transform:scale(1.05);
 }
 
-.mobile-button{
-    display:none;
-}
-
 .footer{
-    margin-top:30px;
+    margin-top:25px;
     text-align:center;
 }
 
 .footer h2{
+    font-size:42px;
     color:#ff2b2b;
     margin-bottom:10px;
-    font-size:42px;
 }
 
 .footer p{
-    color:#ccc;
     font-size:20px;
+    color:#ccc;
 }
 
 @media(max-width:768px){
 
-    .buy-button{
-        display:none;
-    }
-
-    .mobile-button{
-        display:inline-block;
-        margin-top:20px;
-        text-decoration:none;
-        background:#ff2b2b;
-        color:white;
-        padding:18px 32px;
-        border-radius:10px;
-        font-size:20px;
-        font-weight:bold;
-    }
-
     .footer h2{
-        font-size:32px;
+        font-size:30px;
     }
 
     .footer p{
         font-size:18px;
+    }
+
+    .buy-button{
+        width:100%;
+        max-width:300px;
     }
 }
 </style>
@@ -114,23 +97,17 @@ body{
 
     <div class="hero">
 
-        <img src=Images/IMG_9656.png alt="RAW HABA">
+        <!-- CHANGE THIS PATH IF NEEDED -->
+        <img src="/images/haba.png" alt="RAW HABA">
 
         <a
-            href="YOUR_ETSY_LINK_HERE"
+            href="https://www.etsy.com"
             target="_blank"
             class="buy-button">
             BUY NOW
         </a>
 
     </div>
-
-    <a
-        href="YOUR_ETSY_LINK_HERE"
-        target="_blank"
-        class="mobile-button">
-        BUY NOW
-    </a>
 
     <div class="footer">
         <h2>RAW HABA</h2>
