@@ -1,151 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEURO-O2 | Cognitive Reset Status</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
-      background: radial-gradient(circle at top, #0b1f3a, #050b17 70%);
-      color: #e6f1ff;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RAW HABA - Natural Energy Activation Shot</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.hero{
+    width:100%;
+    max-width:1000px;
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+.buy-button{
+    position:absolute;
+    bottom:40px;
+    right:40px;
+    text-decoration:none;
+    background:#ff2b2b;
+    color:white;
+    padding:18px 36px;
+    font-size:22px;
+    font-weight:bold;
+    border-radius:10px;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(255,43,43,.4);
+}
+
+.buy-button:hover{
+    background:#ff4a4a;
+    transform:scale(1.05);
+}
+
+.mobile-button{
+    display:none;
+}
+
+.footer{
+    margin-top:30px;
+    text-align:center;
+}
+
+.footer h2{
+    color:#ff2b2b;
+    margin-bottom:10px;
+    font-size:42px;
+}
+
+.footer p{
+    color:#ccc;
+    font-size:20px;
+}
+
+@media(max-width:768px){
+
+    .buy-button{
+        display:none;
     }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 60px 20px;
+
+    .mobile-button{
+        display:inline-block;
+        margin-top:20px;
+        text-decoration:none;
+        background:#ff2b2b;
+        color:white;
+        padding:18px 32px;
+        border-radius:10px;
+        font-size:20px;
+        font-weight:bold;
     }
-    header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+
+    .footer h2{
+        font-size:32px;
     }
-    @media (max-width: 900px) {
-      header { grid-template-columns: 1fr; gap: 30px; }
+
+    .footer p{
+        font-size:18px;
     }
-    h1 { font-size: 3rem; margin: 0 0 10px 0; letter-spacing: 0.5px; }
-    .tagline { font-size: 1.2rem; color: #9fd8ff; margin-bottom: 25px; }
-    .price { font-size: 1.5rem; font-weight: 600; margin-bottom: 20px; }
-    .cta {
-      display: inline-block;
-      padding: 16px 28px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #4cc3ff, #1a7cff);
-      color: #031321;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(76,195,255,0.35);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 40px rgba(76,195,255,0.45);
-    }
-    .product-image {
-      width: 100%;
-      max-width: 460px;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 24px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
-      object-fit: cover;
-      display: block;
-    }
-    section { margin-top: 80px; }
-    h2 { font-size: 2rem; margin-bottom: 20px; }
-    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
-    .card { background: rgba(255,255,255,0.05); border-radius: 18px; padding: 22px; backdrop-filter: blur(6px); }
-    .card h3 { margin-top: 0; color: #9fd8ff; }
-    .use { max-width: 700px; font-size: 1.05rem; line-height: 1.6; }
-    footer { margin-top: 100px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #9bb0c8; }
-  </style>
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div>
-        <h1>NEURO-O2</h1>
-        <div class="tagline">The 5‑Second Cognitive Reset</div>
-        <div class="price">$12.99 Pack of 6  Professional‑Grade Sensory Wearable</div>
-        <a class="cta" href="https://www.etsy.com/us-es/listing/4439500204/neuro-o2-paquete-de-6-dispositivo?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=neuro-o2&ref=sr_gallery-1-1&organic_search_click=1" target="_blank" rel="noopener">Buy on Etsy</a>
-      </div>
-      <img 
-        src="/IMG_0026.jpeg" 
-        alt="NEURO-O2 Product" 
-        class="product-image" 
-      />
-    </header>
 
-    <section>
-      <h2>What It Is</h2>
-      <p class="use">
-        NEURO-O2 is a professional‑quality portable sensory device designed to reduce mental fatigue and restore peak performance.
-        Using a high‑power, plant‑based aromatic matrix, NEURO-O2 stimulates the trigeminal nerve to trigger an immediate change of state in the brain — no caffeine, no supplements, no crash.
-      </p>
-    </section>
+<div class="container">
 
-    <section>
-      <h2>The Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Somatic‑Cot™</h3>
-          <p>High‑density cotton finger cover for precise, controlled sensory delivery.</p>
-        </div>
-        <div class="card">
-          <h3>Arctic Inhale Technology</h3>
-          <p>Powerful inhalation that opens airways and clears the mind instantly.</p>
-        </div>
-        <div class="card">
-          <h3>Plant Aromatic Matrix</h3>
-          <p>Mint, eucalyptus, rosemary, and lemon balanced for focus and clarity.</p>
-        </div>
-        <div class="card">
-          <h3>Skin‑Safe Infusion</h3>
-          <p>Infused with witch hazel and aloe for a clean, irritation‑free experience.</p>
-        </div>
-      </div>
-    </section>
+    <div class="hero">
 
-    <section>
-      <h2>Why Choose NEURO‑O2?</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Instant Excitation</h3>
-          <p>No waiting, no buildup — immediate sensory activation.</p>
-        </div>
-        <div class="card">
-          <h3>Chemical‑Free</h3>
-          <p>Clean, ammonia‑free alternative to traditional aromatic salts.</p>
-        </div>
-        <div class="card">
-          <h3>Tactile Precision</h3>
-          <p>Finger‑based delivery for controlled and directed stimulation.</p>
-        </div>
-        <div class="card">
-          <h3>Bio‑Hacker Approved</h3>
-          <p>Designed for athletes, high‑risk professionals, and peak performers.</p>
-        </div>
-      </div>
-    </section>
+        <img src="images/haba.png" alt="RAW HABA">
 
-    <section>
-      <h2>How To Use</h2>
-      <p class="use">
-        Slide your finger into the cotton finger sleeve and inhale deeply. Use anytime you need instant concentration, mental clarity, or a rapid reset — during training, meetings, competition, or high‑pressure moments.
-      </p>
-    </section>
+        <a
+            href="YOUR_ETSY_LINK_HERE"
+            target="_blank"
+            class="buy-button">
+            BUY NOW
+        </a>
 
-    <section>
-      <a class="cta" href="https://www.etsy.com/us-es/listing/4439500204/neuro-o2-paquete-de-6-dispositivo?ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=neuro-o2&ref=sr_gallery-1-1&organic_search_click=1" target="_blank" rel="noopener">Purchase NEURO‑O2 on Etsy</a>
-    </section>
+    </div>
 
-    <footer>
-      <p>NEURO‑O2 is a sensory wearable product. Not intended to diagnose, treat, cure, or prevent any disease.</p>
-    </footer>
-  </div>
+    <a
+        href="YOUR_ETSY_LINK_HERE"
+        target="_blank"
+        class="mobile-button">
+        BUY NOW
+    </a>
+
+    <div class="footer">
+        <h2>RAW HABA</h2>
+        <p>Natural Energy Activation Shot</p>
+    </div>
+
+</div>
+
 </body>
 </html>
