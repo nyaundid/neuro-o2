@@ -1,120 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RAW HABA - Natural Energy Activation Shot</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Save Wendy's</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#000;
-    color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.container{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
-}
-
-.hero{
-    width:100%;
-    max-width:900px;
-    text-align:center;
-}
-
-.hero img{
-    width:100%;
-    height:auto;
-    display:block;
-    border-radius:12px;
-}
-
-.buy-button{
-    display:inline-block;
-    margin-top:20px;
-    background:#ff2b2b;
-    color:#fff;
-    text-decoration:none;
-    padding:16px 32px;
-    border-radius:10px;
-    font-size:22px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.buy-button:hover{
-    transform:scale(1.05);
-}
-
-.footer{
-    margin-top:25px;
-    text-align:center;
-}
-
-.footer h2{
-    font-size:42px;
-    color:#ff2b2b;
-    margin-bottom:10px;
-}
-
-.footer p{
-    font-size:20px;
-    color:#ccc;
-}
-
-@media(max-width:768px){
-
-    .footer h2{
-        font-size:30px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
-    .footer p{
-        font-size:18px;
+    body {
+        background: #0b0b0b;
+        color: white;
+        text-align: center;
     }
 
-    .buy-button{
-        width:100%;
-        max-width:300px;
+    .section {
+        padding: 40px 20px;
     }
-}
+
+    img {
+        width: 100%;
+        max-width: 700px;
+        border-radius: 12px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1 {
+        font-size: 44px;
+        color: #ff2d2d;
+        letter-spacing: 2px;
+        margin-top: 20px;
+    }
+
+    .story {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    .divider {
+        height: 1px;
+        background: #222;
+        margin: 40px auto;
+        max-width: 800px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .btn {
+        width: 240px;
+        padding: 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.2s;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+
+    .shop { background: #ff2d2d; color: white; }
+    .x { background: #1d1d1d; border: 1px solid #333; color: white; }
+    .ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .tt { background: #111; border: 1px solid #333; color: white; }
+    .yt { background: #ff0000; color: white; }
+
+    footer {
+        margin-top: 40px;
+        font-size: 12px;
+        opacity: 0.5;
+        padding-bottom: 30px;
+    }
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- HERO: SAVE WENDYS LOGO -->
+<div class="section">
+    <img src="images/savewendys" alt="Save Wendy's Logo">
 
-    <div class="hero">
+    <h1>SAVE WENDY'S</h1>
 
-        <!-- CHANGE THIS PATH IF NEEDED -->
-        <img src="IMG_9724.png" alt="RAW HABA">
+    <p class="story">
+        A movement built by fans. Not a corporation. Not an ad. Just people who believe Wendy’s is worth saving.
+    </p>
+</div>
 
-        <a
-            href="https://defizzer.etsy.com/listing/4520525465/raw-haba-natural-energy-shot-habanero"
-            target="_blank"
-            class="buy-button">
-            BUY NOW
+<div class="divider"></div>
+
+<!-- STORY SECTION -->
+<div class="section">
+    <h2>WHY THIS STARTED</h2>
+
+    <p class="story">
+        Wendy’s stock has fallen heavily over the past few years, and the brand has been struggling with declining momentum.
+        What started as a WallStreetBets post quickly turned into something bigger — a community rallying around one idea:
+        <br><br>
+        <strong>We don’t want Wendy’s to fade away.</strong>
+    </p>
+</div>
+
+<div class="divider"></div>
+
+<!-- WALLSTREETBETS IMAGE -->
+<div class="section">
+    <h2>THE MOMENT IT STARTED</h2>
+
+    <img src="images/wallstreetbets" alt="WallStreetBets Post">
+
+    <p class="story" style="margin-top:20px;">
+        A single post sparked a movement. From memes to momentum, “Save Wendy’s” became more than a joke — it became a mission.
+    </p>
+</div>
+
+<div class="divider"></div>
+
+<!-- CTA + LINKS -->
+<div class="section">
+
+    <h2>JOIN THE MOVEMENT</h2>
+
+    <div class="buttons">
+
+        <a class="btn shop" href="https://etsy.com/your-shop-link" target="_blank">
+            🛒 SHOP THE MOVEMENT
         </a>
 
-    </div>
+        <a class="btn x" href="https://x.com/savewendys" target="_blank">X (Twitter)</a>
+        <a class="btn ig" href="https://instagram.com/savewendys" target="_blank">Instagram</a>
+        <a class="btn tt" href="https://tiktok.com/@savewendys" target="_blank">TikTok</a>
+        <a class="btn yt" href="https://youtube.com/@savewendys" target="_blank">YouTube</a>
 
-    <div class="footer">
-        <h2>RAW HABA</h2>
-        <p>Natural Energy Activation Shot</p>
     </div>
-
 </div>
+
+<footer>
+    © SaveWendys — Unofficial fan movement. Not affiliated with Wendy’s.
+</footer>
 
 </body>
 </html>
