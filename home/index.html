@@ -27,14 +27,12 @@ background:#ffffff;
 color:#111;
 font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
-
-/* smoother rendering */
 -webkit-font-smoothing:antialiased;
 -moz-osx-font-smoothing:grayscale;
 text-rendering:optimizeLegibility;
 }
 
-/* ===== TOP TICKER (GPU OPTIMIZED) ===== */
+/* ===== TOP TICKER ===== */
 
 .ticker{
 background:#d6001c;
@@ -56,12 +54,38 @@ animation:scroll 18s linear infinite;
 }
 
 @keyframes scroll{
-0%{
-transform:translate3d(0,0,0);
+0%{ transform:translate3d(0,0,0); }
+100%{ transform:translate3d(-100%,0,0); }
 }
-100%{
-transform:translate3d(-100%,0,0);
+
+/* ===== TOP LINKS BAR ===== */
+
+.top-links{
+background:#fff5f5;
+padding:15px;
+text-align:center;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+border-bottom:3px solid #d6001c;
 }
+
+.top-links a{
+text-decoration:none;
+font-weight:900;
+color:#d6001c;
+background:#fff;
+padding:10px 18px;
+border-radius:10px;
+border:2px solid #d6001c;
+transition:0.2s ease;
+}
+
+.top-links a:hover{
+background:#d6001c;
+color:white;
+transform:translateY(-3px);
 }
 
 /* ===== HERO ===== */
@@ -77,8 +101,6 @@ width:100%;
 max-width:600px;
 display:block;
 margin:auto;
-
-/* prevents layout shift */
 height:auto;
 will-change:transform;
 }
@@ -143,11 +165,8 @@ max-width:900px;
 margin:35px auto;
 display:block;
 border-radius:18px;
-
-/* smoother rendering */
 will-change:transform;
 transform:translateZ(0);
-
 box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
 
@@ -184,8 +203,6 @@ border-radius:12px;
 text-decoration:none;
 font-weight:900;
 font-size:16px;
-
-/* smoother hover */
 transition:transform .2s ease, opacity .2s ease;
 will-change:transform;
 }
@@ -193,8 +210,6 @@ will-change:transform;
 .btn:hover{
 transform:translate3d(0,-4px,0) scale(1.05);
 }
-
-/* ===== BUTTON TYPES ===== */
 
 .shop{
 background:#fff;
@@ -249,6 +264,16 @@ font-size:14px;
 <span>
 🚨 SAVE WENDY'S MOVEMENT LIVE • BUY A SHIRT • SHARE A MEME • RECRUIT FRIENDS • SAVE THE REDHEAD 🚨
 </span>
+</div>
+
+<!-- ===== TOP LINKS WITH @savewendys ===== -->
+
+<div class="top-links">
+<a href="https://etsy.com">🛒 Shop (Etsy)</a>
+<a href="https://x.com/savewendys">𝕏 @savewendys</a>
+<a href="https://instagram.com/savewendys">📸 Instagram @savewendys</a>
+<a href="https://tiktok.com/@savewendys">🎵 TikTok @savewendys</a>
+<a href="https://youtube.com/@savewendys">▶ YouTube @savewendys</a>
 </div>
 
 <section class="hero">
@@ -314,11 +339,11 @@ Now the Save Wendy's Army is recruiting.
 
 <div class="buttons">
 
-<a href="#" class="btn shop">🛒 SHOP THE MOVEMENT</a>
-<a href="#" class="btn social">𝕏 Follow on X</a>
-<a href="#" class="btn social">📸 Instagram</a>
-<a href="#" class="btn social">🎵 TikTok</a>
-<a href="#" class="btn social">▶ YouTube</a>
+<a href="https://etsy.com" class="btn shop">🛒 SHOP THE MOVEMENT</a>
+<a href="https://x.com/savewendys" class="btn social">𝕏 Follow on X</a>
+<a href="https://instagram.com/savewendys" class="btn social">📸 Instagram</a>
+<a href="https://tiktok.com/@savewendys" class="btn social">🎵 TikTok</a>
+<a href="https://youtube.com/@savewendys" class="btn social">▶ YouTube</a>
 
 </div>
 
