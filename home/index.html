@@ -10,10 +10,16 @@
 
 <style>
 
+/* ===== BASE OPTIMIZATIONS FOR SMOOTH SCROLL ===== */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -21,9 +27,14 @@ background:#ffffff;
 color:#111;
 font-family:Arial,Helvetica,sans-serif;
 overflow-x:hidden;
+
+/* smoother rendering */
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;
 }
 
-/* TOP ALERT */
+/* ===== TOP TICKER (GPU OPTIMIZED) ===== */
 
 .ticker{
 background:#d6001c;
@@ -33,26 +44,32 @@ white-space:nowrap;
 overflow:hidden;
 font-weight:700;
 font-size:15px;
+position:relative;
 }
 
 .ticker span{
 display:inline-block;
 padding-left:100%;
-animation:scroll 20s linear infinite;
+will-change:transform;
+transform:translate3d(0,0,0);
+animation:scroll 18s linear infinite;
 }
 
 @keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-100%);}
+0%{
+transform:translate3d(0,0,0);
+}
+100%{
+transform:translate3d(-100%,0,0);
+}
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero{
 padding:50px 20px;
 text-align:center;
-background:
-radial-gradient(circle at top,#ffebee 0%,#fff 70%);
+background:radial-gradient(circle at top,#ffebee 0%,#fff 70%);
 }
 
 .logo{
@@ -60,6 +77,10 @@ width:100%;
 max-width:600px;
 display:block;
 margin:auto;
+
+/* prevents layout shift */
+height:auto;
+will-change:transform;
 }
 
 .hero h1{
@@ -84,7 +105,7 @@ line-height:1.7;
 color:#444;
 }
 
-/* COUNTERS */
+/* ===== DIVIDER ===== */
 
 .divider{
 width:120px;
@@ -94,7 +115,7 @@ border-radius:999px;
 margin:20px auto 10px;
 }
 
-/* MEME SECTION */
+/* ===== SECTIONS ===== */
 
 .section{
 padding:70px 20px;
@@ -122,10 +143,15 @@ max-width:900px;
 margin:35px auto;
 display:block;
 border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+/* smoother rendering */
+will-change:transform;
+transform:translateZ(0);
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
 
-/* CTA */
+/* ===== CTA ===== */
 
 .cta{
 background:#d6001c;
@@ -158,12 +184,17 @@ border-radius:12px;
 text-decoration:none;
 font-weight:900;
 font-size:16px;
-transition:.25s;
+
+/* smoother hover */
+transition:transform .2s ease, opacity .2s ease;
+will-change:transform;
 }
 
 .btn:hover{
-transform:translateY(-4px) scale(1.05);
+transform:translate3d(0,-4px,0) scale(1.05);
 }
+
+/* ===== BUTTON TYPES ===== */
 
 .shop{
 background:#fff;
@@ -175,7 +206,7 @@ background:#111;
 color:white;
 }
 
-/* FUN SECTION */
+/* ===== BATTLE SECTION ===== */
 
 .battle{
 background:#fff5f5;
@@ -199,7 +230,7 @@ line-height:2;
 font-weight:700;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer{
 background:#111;
@@ -211,6 +242,7 @@ font-size:14px;
 
 </style>
 </head>
+
 <body>
 
 <div class="ticker">
@@ -225,16 +257,16 @@ font-size:14px;
 
 <h1>SAVE WENDY'S</h1>
 
-<p class="tagline">
-The Internet's Most Important Mission.
-</p>
+<p class="tagline">The Internet's Most Important Mission.</p>
 
 <p class="sub">
 A fan-powered movement built by people who refuse to let one of America's most iconic fast-food brands become another forgotten memory.
 </p>
 
 </section>
+
 <div class="divider"></div>
+
 <section class="section">
 
 <h2>HOW IT STARTED</h2>
@@ -278,31 +310,15 @@ Now the Save Wendy's Army is recruiting.
 
 <h2>JOIN THE ARMY</h2>
 
-<p>
-Every movement starts with one supporter.
-</p>
+<p>Every movement starts with one supporter.</p>
 
 <div class="buttons">
 
-<a href="#" class="btn shop">
-🛒 SHOP THE MOVEMENT
-</a>
-
-<a href="#" class="btn social">
-𝕏 Follow on X
-</a>
-
-<a href="#" class="btn social">
-📸 Instagram
-</a>
-
-<a href="#" class="btn social">
-🎵 TikTok
-</a>
-
-<a href="#" class="btn social">
-▶ YouTube
-</a>
+<a href="#" class="btn shop">🛒 SHOP THE MOVEMENT</a>
+<a href="#" class="btn social">𝕏 Follow on X</a>
+<a href="#" class="btn social">📸 Instagram</a>
+<a href="#" class="btn social">🎵 TikTok</a>
+<a href="#" class="btn social">▶ YouTube</a>
 
 </div>
 
