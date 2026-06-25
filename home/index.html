@@ -1,158 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Save Wendy's</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Save Wendy's 🚨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    body {
-        background: #0b0b0b;
-        color: white;
-        text-align: center;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .section {
-        padding: 40px 20px;
-    }
+body{
+background:#ffffff;
+color:#111;
+font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden;
+}
 
-    img {
-        width: 100%;
-        max-width: 700px;
-        border-radius: 12px;
-        margin: 0 auto;
-        display: block;
-    }
+/* TOP ALERT */
 
-    h1 {
-        font-size: 44px;
-        color: #ff2d2d;
-        letter-spacing: 2px;
-        margin-top: 20px;
-    }
+.ticker{
+background:#d6001c;
+color:white;
+padding:12px;
+white-space:nowrap;
+overflow:hidden;
+font-weight:700;
+font-size:15px;
+}
 
-    .story {
-        max-width: 800px;
-        margin: 0 auto;
-        font-size: 16px;
-        line-height: 1.6;
-        opacity: 0.9;
-    }
+.ticker span{
+display:inline-block;
+padding-left:100%;
+animation:scroll 20s linear infinite;
+}
 
-    .divider {
-        height: 1px;
-        background: #222;
-        margin: 40px auto;
-        max-width: 800px;
-    }
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        margin-top: 25px;
-    }
+/* HERO */
 
-    .btn {
-        width: 240px;
-        padding: 12px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.2s;
-        display: inline-block;
-    }
+.hero{
+padding:50px 20px;
+text-align:center;
+background:
+radial-gradient(circle at top,#ffebee 0%,#fff 70%);
+}
 
-    .btn:hover {
-        transform: scale(1.05);
-    }
+.logo{
+width:100%;
+max-width:600px;
+display:block;
+margin:auto;
+}
 
-    .shop { background: #ff2d2d; color: white; }
-    .x { background: #1d1d1d; border: 1px solid #333; color: white; }
-    .ig { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
-    .tt { background: #111; border: 1px solid #333; color: white; }
-    .yt { background: #ff0000; color: white; }
+.hero h1{
+font-family:'Permanent Marker',cursive;
+font-size:clamp(50px,10vw,100px);
+color:#d6001c;
+margin-top:20px;
+line-height:1;
+}
 
-    footer {
-        margin-top: 40px;
-        font-size: 12px;
-        opacity: 0.5;
-        padding-bottom: 30px;
-    }
+.tagline{
+font-size:22px;
+font-weight:700;
+margin-top:15px;
+}
+
+.sub{
+max-width:750px;
+margin:20px auto;
+font-size:18px;
+line-height:1.7;
+color:#444;
+}
+
+/* COUNTERS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:30px 20px;
+}
+
+.card{
+background:white;
+border:3px solid #d6001c;
+border-radius:18px;
+padding:25px;
+width:220px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.number{
+font-size:42px;
+font-weight:900;
+color:#d6001c;
+}
+
+.label{
+font-weight:700;
+margin-top:5px;
+}
+
+/* MEME SECTION */
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+.section h2{
+font-family:'Bebas Neue',sans-serif;
+font-size:54px;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#d6001c;
+}
+
+.story{
+max-width:850px;
+margin:auto;
+line-height:1.8;
+font-size:19px;
+}
+
+.meme{
+width:100%;
+max-width:900px;
+margin:35px auto;
+display:block;
+border-radius:18px;
+box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+
+/* CTA */
+
+.cta{
+background:#d6001c;
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+.cta h2{
+font-family:'Permanent Marker';
+font-size:58px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.btn{
+padding:16px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:900;
+font-size:16px;
+transition:.25s;
+}
+
+.btn:hover{
+transform:translateY(-4px) scale(1.05);
+}
+
+.shop{
+background:#fff;
+color:#d6001c;
+}
+
+.social{
+background:#111;
+color:white;
+}
+
+/* FUN SECTION */
+
+.battle{
+background:#fff5f5;
+padding:70px 20px;
+text-align:center;
+}
+
+.battle h2{
+font-family:'Permanent Marker';
+font-size:52px;
+color:#d6001c;
+margin-bottom:20px;
+}
+
+.battle ul{
+list-style:none;
+max-width:700px;
+margin:auto;
+font-size:22px;
+line-height:2;
+font-weight:700;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#aaa;
+padding:40px 20px;
+text-align:center;
+font-size:14px;
+}
+
 </style>
 </head>
-
 <body>
 
-<!-- HERO: SAVE WENDYS LOGO -->
-<div class="section">
-    <img src="IMG_0050.png" alt="Save Wendy's Logo">
-
-    <h1>SAVE WENDY'S</h1>
-
-    <p class="story">
-        A movement built by fans. Not a corporation. Not an ad. Just people who believe Wendy’s is worth saving.
-    </p>
+<div class="ticker">
+<span>
+🚨 SAVE WENDY'S MOVEMENT LIVE • BUY A SHIRT • SHARE A MEME • RECRUIT FRIENDS • SAVE THE REDHEAD 🚨
+</span>
 </div>
 
-<div class="divider"></div>
+<section class="hero">
 
-<!-- STORY SECTION -->
-<div class="section">
-    <h2>WHY THIS STARTED</h2>
+<img src="IMG_0050.png" class="logo">
 
-    <p class="story">
-        Wendy’s stock has fallen heavily over the past few years, and the brand has been struggling with declining momentum.
-        What started as a WallStreetBets post quickly turned into something bigger — a community rallying around one idea:
-        <br><br>
-        <strong>We don’t want Wendy’s to fade away.</strong>
-    </p>
+<h1>SAVE WENDY'S</h1>
+
+<p class="tagline">
+The Internet's Most Important Mission.
+</p>
+
+<p class="sub">
+A fan-powered movement built by people who refuse to let one of America's most iconic fast-food brands become another forgotten memory.
+</p>
+
+</section>
+
+<div class="stats">
+
+<div class="card">
+<div class="number">12,847</div>
+<div class="label">Movement Members</div>
 </div>
 
-<div class="divider"></div>
-
-<!-- WALLSTREETBETS IMAGE -->
-<div class="section">
-    <h2>THE MOMENT IT STARTED</h2>
-
-    <img src="IMG_0049.jpeg" alt="WallStreetBets Post">
-
-    <p class="story" style="margin-top:20px;">
-        A single post sparked a movement. From memes to momentum, “Save Wendy’s” became more than a joke — it became a mission.
-    </p>
+<div class="card">
+<div class="number">847K</div>
+<div class="label">Memes Shared</div>
 </div>
 
-<div class="divider"></div>
-
-<!-- CTA + LINKS -->
-<div class="section">
-
-    <h2>JOIN THE MOVEMENT</h2>
-
-    <div class="buttons">
-
-        <a class="btn shop" href="https://etsy.com/your-shop-link" target="_blank">
-            🛒 SHOP THE MOVEMENT
-        </a>
-
-        <a class="btn x" href="https://x.com/savewendys" target="_blank">X (Twitter)</a>
-        <a class="btn ig" href="https://instagram.com/savewendys" target="_blank">Instagram</a>
-        <a class="btn tt" href="https://tiktok.com/@savewendys" target="_blank">TikTok</a>
-        <a class="btn yt" href="https://youtube.com/@savewendys" target="_blank">YouTube</a>
-
-    </div>
+<div class="card">
+<div class="number">99.9%</div>
+<div class="label">Frosty Loyalty</div>
 </div>
+
+</div>
+
+<section class="section">
+
+<h2>HOW IT STARTED</h2>
+
+<p class="story">
+What began as a WallStreetBets joke quickly evolved into something much bigger.
+A simple question spread across social media:
+</p>
+
+<br>
+
+<h3 style="font-size:34px;color:#d6001c;">
+"What if we actually saved Wendy's?"
+</h3>
+
+<img src="IMG_0049.jpeg" class="meme">
+
+<p class="story">
+One meme became thousands.
+Thousands became a movement.
+Now the Save Wendy's Army is recruiting.
+</p>
+
+</section>
+
+<section class="battle">
+
+<h2>OUR OBJECTIVES</h2>
+
+<ul>
+<li>🍔 Protect the Frosty</li>
+<li>🔥 Keep spicy nuggets alive</li>
+<li>📈 Spread the movement</li>
+<li>🎯 Create legendary memes</li>
+<li>❤️ Save Wendy's</li>
+</ul>
+
+</section>
+
+<section class="cta">
+
+<h2>JOIN THE ARMY</h2>
+
+<p>
+Every movement starts with one supporter.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn shop">
+🛒 SHOP THE MOVEMENT
+</a>
+
+<a href="#" class="btn social">
+𝕏 Follow on X
+</a>
+
+<a href="#" class="btn social">
+📸 Instagram
+</a>
+
+<a href="#" class="btn social">
+🎵 TikTok
+</a>
+
+<a href="#" class="btn social">
+▶ YouTube
+</a>
+
+</div>
+
+</section>
 
 <footer>
-    © SaveWendys — Unofficial fan movement. Not affiliated with Wendy’s.
+
+© 2026 SaveWendys.com
+
+<br><br>
+
+Unofficial fan movement. Not affiliated with Wendy's.
+
 </footer>
 
 </body>
